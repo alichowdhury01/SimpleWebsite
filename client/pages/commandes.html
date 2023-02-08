@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commandes</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../utilitaires/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"><link rel="stylesheet" href="client\utilitaires\bootstrap-5.2.0-beta1-dist\css\bootstrap.min.css">
+    <script src="../utilitaires/jquery-3.6.0.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../utilitaires/bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js"></script>
+    <script src="../js/restaurant.js"></script>
+    <script src="../js/connexion.js"></script> 
+</head>
+<body class="bgachats" onLoad="initialiser();">
+    <!-- Barre de navigation-->
+    <nav class="navbar navbar-expand-lg home-menu" id="menu-area">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img class="imglogo" src="../images/logosite.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+        
+            <div onclick="rtn();" class="optmembre">
+                <span"><i class="bi bi-door-open-fill">Logout</i></span>
+            </div>
+        </div>
+    </nav>
+    <!-- Fin barre de navigation-->
+
+    <!-- Début du contenu principal-->
+    <div class="container bghero">
+    
+        <h1 class="commande-title">Menu Commandes</h1>
+        <p class="commande-text">Veuillez faire vos choix</p>
+        <div class="row">
+
+            <div class="col-md-1"></div>
+            <div class="card col-md-4 facture-bg" >
+                <div class="card-body">
+                    <img id="imgEntree" src="" class="card-img-top" alt="entrees">
+                    <h5 id="nomEntree" class="card-title text-center gap"></h5>
+                    <label for="selectEntree" class="form-label">Choix des Entrees :</label>
+                    <select id="selectEntree" onChange="traiterEntree();" class="form-select" aria-label="Default select example"></select>
+                    <h5 id="prixEntree" class="text-end gap"></h5>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="card col-md-4 facture-bg">
+                
+                <div class="card-body">
+                    <img id="imgRepas" src="" class="card-img-top" alt="repas">
+                    <h5 id="nomRepas" class="card-title text-center gap"></h5>
+                    <label for="selectRepas" class="form-label">Choix de Repas :</label>
+                    <select id="selectRepas" onChange="traiterRepas();" class="form-select" aria-label="Default select example"></select>
+                    <h5 id="prixRepas" class="text-end gap"></h5>
+                </div>
+            </div> 
+        </div>
+
+    
+        <!-- Facture -->
+        <br><br>
+        <div class="facture" role="alert">
+            <div id="facture" class="text-center"><span class="idf">FACTURE</span></div>
+        </div>
+        <!-- Fin facture -->
+        <br>
+
+    </div>
+    <!-- Fin du contenu principal-->
+
+
+    
+            <!--::footer part start::-->
+
+            <footer class="footer-area">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-xl-3 col-sm-6 col-md-3 col-lg-3">
+                            <div class="single-footer-widget footer_1">
+                                <img src="../images/logosite.png" class="imglogo" alt="#">
+                                <p>514 888-8888</p>
+                                <span>Ali@contact.com</span>
+                                <div class="social_icon">
+                                    <a href="#" class="single_social_icon"><i class="fab fa-facebook-square"></i></a>
+                                    <a href="#" class="single_social_icon"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 col-md-2 col-lg-3">
+                            <div class="single-footer-widget footer_2">
+                                <h4>Quick links</h4>
+                                <div class="contact_info">
+                                    <ul>
+                                        <li><a href="#about">About</a></li>
+                                        <li><a href="#contact"> Contact</a></li>
+                                        <li><a href="#review ">Review</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 col-md-4 col-lg-3">
+                            <div class="single-footer-widget footer_3">
+                                <h4>Subscribe newsletter</h4>
+                                <form action="#">
+                                <div class="form-group">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Email Address" onblur="this.placeholder = 'Email Address'">
+                                        <div class="input-group-append">
+                                            <button class="btn_sent" type="button">
+                                                <i class="bi bi-send"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                </form>
+                                <p>
+                                Subscribe newsletter to get all updates about discount and
+                                offers.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                <div class="copyright_part_text">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <p class="footer-text m-0">Copyright ©01/0/2022 All rights reserved | This template is made with Ali</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+</body>
+</html>
